@@ -26,7 +26,7 @@ class FenetrePrincipale:
 
     def __init__(self):
         # Réglage de certains paramètres
-        self.icone = pygame.image.load(os.path.join(os.getcwd(), "Images", "ImagesOK", "icone.png")).convert_alpha()
+        self.icone = pygame.image.load(os.path.join(os.getcwd(), "Images", "icone.png")).convert_alpha()
         pygame.display.set_icon(self.icone)
         pygame.display.set_caption('Jeu d’échecs') # titre
 

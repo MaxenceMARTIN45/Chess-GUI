@@ -38,7 +38,7 @@ class Case:
             if valeur: # == True
                 # chemin = os.path.join(os.getcwd(), "Images", "ImagesOK", "case " + self.couleur + " " + cle + ".png")
                 # self.image = pygame.image.load(chemin).convert_alpha()
-                self.image = os.path.join(os.getcwd(), "Images", "ImagesOK", "case " + self.couleur + " " + cle + ".png")
+                self.image = os.path.join(os.getcwd(), "Images", "case " + self.couleur + " " + cle + ".png")
         # Affichage
         fenetrePrincipale.fenetre.blit(pygame.image.load(self.image).convert_alpha(),self.origine_pixel)
 

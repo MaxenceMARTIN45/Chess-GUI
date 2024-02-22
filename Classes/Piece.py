@@ -30,7 +30,7 @@ class Piece:
     def afficher(self,fenetrePrincipale,fenetre):
         # chemin = os.path.join(os.getcwd(), "Images", "ImagesOK", self.poste + "-" + self.couleur + ".png")
         # self.image = pygame.image.load(chemin).convert_alpha()
-        self.image = os.path.join(os.getcwd(), "Images", "ImagesOK", self.poste + "-" + self.couleur + ".png")
+        self.image = os.path.join(os.getcwd(), "Images", self.poste + "-" + self.couleur + ".png")
         fenetrePrincipale.fenetre.blit(pygame.image.load(self.image).convert_alpha(),self.case.origine_pixel)
 
     def deplacer(self,nouvelle_case):

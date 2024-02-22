@@ -1,0 +1,770 @@
+{
+  "A1": {
+    "nom": "A1",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 0,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 1
+    }
+  },
+  "A2": {
+    "nom": "A2",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 0,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 1
+    }
+  },
+  "A3": {
+    "nom": "A3",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 0,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 1
+    }
+  },
+  "A4": {
+    "nom": "A4",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 0,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 1
+    }
+  },
+  "A5": {
+    "nom": "A5",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 0,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 1
+    }
+  },
+  "A6": {
+    "nom": "A6",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 0,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 1
+    }
+  },
+  "A7": {
+    "nom": "A7",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 0,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 1
+    }
+  },
+  "A8": {
+    "nom": "A8",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 0,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 1
+    }
+  },
+  "B1": {
+    "nom": "B1",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 65,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 2
+    }
+  },
+  "B2": {
+    "nom": "B2",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 65,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 2
+    }
+  },
+  "B3": {
+    "nom": "B3",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 65,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 2
+    }
+  },
+  "B4": {
+    "nom": "B4",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 65,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 2
+    }
+  },
+  "B5": {
+    "nom": "B5",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 65,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 2
+    }
+  },
+  "B6": {
+    "nom": "B6",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 65,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 2
+    }
+  },
+  "B7": {
+    "nom": "B7",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 65,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 2
+    }
+  },
+  "B8": {
+    "nom": "B8",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 65,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 2
+    }
+  },
+  "C1": {
+    "nom": "C1",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 130,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 3
+    }
+  },
+  "C2": {
+    "nom": "C2",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 130,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 3
+    }
+  },
+  "C3": {
+    "nom": "C3",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 130,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 3
+    }
+  },
+  "C4": {
+    "nom": "C4",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 130,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 3
+    }
+  },
+  "C5": {
+    "nom": "C5",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 130,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 3
+    }
+  },
+  "C6": {
+    "nom": "C6",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 130,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 3
+    }
+  },
+  "C7": {
+    "nom": "C7",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 130,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 3
+    }
+  },
+  "C8": {
+    "nom": "C8",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 130,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 3
+    }
+  },
+  "D1": {
+    "nom": "D1",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 195,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 4
+    }
+  },
+  "D2": {
+    "nom": "D2",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 195,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 4
+    }
+  },
+  "D3": {
+    "nom": "D3",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 195,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 4
+    }
+  },
+  "D4": {
+    "nom": "D4",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 195,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 4
+    }
+  },
+  "D5": {
+    "nom": "D5",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 195,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 4
+    }
+  },
+  "D6": {
+    "nom": "D6",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 195,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 4
+    }
+  },
+  "D7": {
+    "nom": "D7",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 195,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 4
+    }
+  },
+  "D8": {
+    "nom": "D8",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 195,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 4
+    }
+  },
+  "E1": {
+    "nom": "E1",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 260,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 5
+    }
+  },
+  "E2": {
+    "nom": "E2",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 260,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 5
+    }
+  },
+  "E3": {
+    "nom": "E3",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 260,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 5
+    }
+  },
+  "E4": {
+    "nom": "E4",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 260,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 5
+    }
+  },
+  "E5": {
+    "nom": "E5",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 260,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 5
+    }
+  },
+  "E6": {
+    "nom": "E6",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 260,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 5
+    }
+  },
+  "E7": {
+    "nom": "E7",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 260,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 5
+    }
+  },
+  "E8": {
+    "nom": "E8",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 260,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 5
+    }
+  },
+  "F1": {
+    "nom": "F1",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 325,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 6
+    }
+  },
+  "F2": {
+    "nom": "F2",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 325,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 6
+    }
+  },
+  "F3": {
+    "nom": "F3",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 325,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 6
+    }
+  },
+  "F4": {
+    "nom": "F4",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 325,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 6
+    }
+  },
+  "F5": {
+    "nom": "F5",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 325,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 6
+    }
+  },
+  "F6": {
+    "nom": "F6",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 325,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 6
+    }
+  },
+  "F7": {
+    "nom": "F7",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 325,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 6
+    }
+  },
+  "F8": {
+    "nom": "F8",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 325,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 6
+    }
+  },
+  "G1": {
+    "nom": "G1",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 390,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 7
+    }
+  },
+  "G2": {
+    "nom": "G2",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 390,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 7
+    }
+  },
+  "G3": {
+    "nom": "G3",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 390,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 7
+    }
+  },
+  "G4": {
+    "nom": "G4",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 390,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 7
+    }
+  },
+  "G5": {
+    "nom": "G5",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 390,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 7
+    }
+  },
+  "G6": {
+    "nom": "G6",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 390,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 7
+    }
+  },
+  "G7": {
+    "nom": "G7",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 390,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 7
+    }
+  },
+  "G8": {
+    "nom": "G8",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 390,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 7
+    }
+  },
+  "H1": {
+    "nom": "H1",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 455,
+      "y": 455
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 8,
+      "colonne": 8
+    }
+  },
+  "H2": {
+    "nom": "H2",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 455,
+      "y": 390
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 7,
+      "colonne": 8
+    }
+  },
+  "H3": {
+    "nom": "H3",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 455,
+      "y": 325
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 6,
+      "colonne": 8
+    }
+  },
+  "H4": {
+    "nom": "H4",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 455,
+      "y": 260
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 5,
+      "colonne": 8
+    }
+  },
+  "H5": {
+    "nom": "H5",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 455,
+      "y": 195
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 4,
+      "colonne": 8
+    }
+  },
+  "H6": {
+    "nom": "H6",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 455,
+      "y": 130
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 3,
+      "colonne": 8
+    }
+  },
+  "H7": {
+    "nom": "H7",
+    "couleur": "blanc",
+    "origine_pixel": {
+      "x": 455,
+      "y": 65
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 2,
+      "colonne": 8
+    }
+  },
+  "H8": {
+    "nom": "H8",
+    "couleur": "noir",
+    "origine_pixel": {
+      "x": 455,
+      "y": 0
+    },
+    "coordonnees_quadrillage": {
+      "ligne": 1,
+      "colonne": 8
+    }
+  }
+}

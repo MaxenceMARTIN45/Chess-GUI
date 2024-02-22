@@ -1,0 +1,62 @@
+{
+  "pion-blanc": {
+    "poste" :  "pion",
+    "couleur": "blanc",
+    "caseInitialisation": [ "A2", "B2", "C2", "D2", "E2", "F2", "G2", "H2" ]
+  },
+  "roi-blanc": {
+    "poste": "roi",
+    "couleur": "blanc",
+    "caseInitialisation": [ "E1" ]
+  },
+  "reine-blanc": {
+    "poste": "reine",
+    "couleur": "blanc",
+    "caseInitialisation": [ "D1" ]
+  },
+  "tour-blanc": {
+    "poste": "tour",
+    "couleur": "blanc",
+    "caseInitialisation": [ "A1", "H1" ]
+  },
+  "cavalier-blanc": {
+    "poste": "cavalier",
+    "couleur": "blanc",
+    "caseInitialisation": [ "B1", "G1" ]
+  },
+  "fou-blanc": {
+    "poste": "fou",
+    "couleur": "blanc",
+    "caseInitialisation": [ "C1", "F1" ]
+  },
+  "pion-noir": {
+    "poste": "pion",
+    "couleur": "noir",
+    "caseInitialisation": [ "A7", "B7", "C7", "D7", "E7", "F7", "G7", "H7" ]
+  },
+  "roi-noir": {
+    "poste": "roi",
+    "couleur": "noir",
+    "caseInitialisation": [ "E8" ]
+  },
+  "reine-noir": {
+    "poste": "reine",
+    "couleur": "noir",
+    "caseInitialisation": [ "D8" ]
+  },
+  "tour-noir": {
+    "poste": "tour",
+    "couleur": "noir",
+    "caseInitialisation": [ "A8", "H8" ]
+  },
+  "cavalier-noir": {
+    "poste": "cavalier",
+    "couleur": "noir",
+    "caseInitialisation": [ "B8", "G8" ]
+  },
+  "fou-noir": {
+    "poste": "fou",
+    "couleur": "noir",
+    "caseInitialisation": [ "C8", "F8" ]
+  }
+}

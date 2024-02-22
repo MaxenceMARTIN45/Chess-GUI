@@ -1,52 +1,43 @@
-﻿# Importation des classes
-
+﻿# Importation des modules nécessaires
 from Classes.GestionnaireEvenement import *
 from Classes.Plateau import *
-
 import pygame
-# from pygame.locals import *
 import sys
 import os
 
-# Classe FenetrePrincipale
-
+# Définition de la classe FenetrePrincipale
 class FenetrePrincipale:
-
-    # Attributs
-
-    fenetre = pygame.display.set_mode((520,520))
-    #AttributeError: type object 'FenetrePrincipale' has no attribute 'fenetre'
+    # Initialisation de la fenêtre principale avec des valeurs par défaut
+    fenetre = pygame.display.set_mode((520, 520))
     afficher = True
-    #TypeError: 'bool' object is not callable # survient à fen.afficher()
     plateau = Plateau()
-    #AttributeError: type object 'FenetrePrincipale' has no attribute 'plateau'
     gestionnaireEvenement = GestionnaireEvenement()
 
-    # Constructeur
-
     def __init__(self):
-        # Réglage de certains paramètres
+        # Chargement de l'icône et configuration de la fenêtre
         self.icone = pygame.image.load(os.path.join(os.getcwd(), "Images", "icone.png")).convert_alpha()
         pygame.display.set_icon(self.icone)
-        pygame.display.set_caption('Jeu d’échecs') # titre
-
-    # Méthodes
+        pygame.display.set_caption('Jeu d’échecs')
 
     def afficher(self):
+        # Boucle principale d'affichage
         while FenetrePrincipale.afficher:
-            # Gerer les évènements
+            # Gestion des événements avec le gestionnaire d'événements
             self.gestionnaireEvenement.gererEvenements(FenetrePrincipale)
-            # Affichage du plateau
-            self.plateau.afficher(FenetrePrincipale,FenetrePrincipale.fenetre)
-            # Rafraichissement
+            
+            # Affichage du plateau dans la fenêtre principale
+            self.plateau.afficher(FenetrePrincipale, FenetrePrincipale.fenetre)
+            
+            # Mise à jour de l'affichage
             pygame.display.flip()
 
-        # Au moment de quitter le jeu
+        # Fermeture propre de la fenêtre
         pygame.display.flip()
         pygame.quit()
         sys.exit()
 
+# Création d'une instance de la classe FenetrePrincipale
+fen = FenetrePrincipale()
 
-fen=FenetrePrincipale()
+# Appel de la méthode afficher pour démarrer la boucle d'affichage
 fen.afficher()
-

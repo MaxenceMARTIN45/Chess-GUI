@@ -1,63 +1,58 @@
-﻿# Importation des classes
-
+﻿# Importing the Piece class from the specified module
 from Classes.Piece import *
 
-# Importation pour Pygame
-
-# import pygame
-# from pygame.locals import *
-# import sys
-
-# Classe Fou
-
+# Definition of the Fou class, which is a subclass of Piece
 class Fou(Piece):
 
-    def __init__(self,case,couleur,poste):
-        # Attributs
-        super().__init__(case,couleur,poste)
-        self.trajectoirePossible = [(1,1),(-1,-1),(-1,1),(1,-1)]
+    # Constructor method to initialize the Fou object
+    def __init__(self, case, couleur, poste):
+        super().__init__(case, couleur, poste)
+        # Possible trajectories for the Fou piece
+        self.trajectoirePossible = [(1, 1), (-1, -1), (-1, 1), (1, -1)]
 
-    def caseOuLeDeplacementEstPossible(self,plateau,avecAffichage):#,gestionnaireEvenement):
+    # Method to determine possible destination squares for the Fou piece
+    def caseOuLeDeplacementEstPossible(self, plateau, avecAffichage):
         caseActuelle = self.case.coordonnees_quadrillage
         casePossible = []
         sortirDeLaBoucleDIterationDeTrajectoire = False
+
+        # Iterate over possible trajectories
         for trajectoire in self.trajectoirePossible:
-            for i in range(1,8):
-                newCasePossible = (caseActuelle[0]+i*trajectoire[0],caseActuelle[1]+i*trajectoire[1])
+            for i in range(1, 8):
+                # Calculate the new potential destination square
+                newCasePossible = (caseActuelle[0] + i * trajectoire[0], caseActuelle[1] + i * trajectoire[1])
+
+                # Check if the new square is within the chessboard
                 if self.estDansPlateau(newCasePossible):
-                    # Trouver la case associée
+                    # Iterate over all squares on the chessboard
                     for case in plateau.casesEchiquier:
                         if newCasePossible == case.coordonnees_quadrillage:
                             laCaseRecherchee = case
-                            # Regarder si une piece est sur cette case
-                            if laCaseRecherchee.occupeePar!=None and laCaseRecherchee.occupeePar.couleur!=self.couleur:
-                                # ie est occupee par un adversaire
-                                sortirDeLaBoucleDIterationDeTrajectoire=True
+                            # Check if the square is occupied by an opponent's piece
+                            if laCaseRecherchee.occupeePar is not None and laCaseRecherchee.occupeePar.couleur != self.couleur:
+                                sortirDeLaBoucleDIterationDeTrajectoire = True
                                 casePossible.append(laCaseRecherchee)
-                                if avecAffichage == True:
-                                    laCaseRecherchee.etatAffichage = {"normal":False,"echec":False,"rond":False,"targetPiece":True,"apresDeplacement":False,"passageSourisSurRond":False,"selectionDePiece":False}
-                            elif laCaseRecherchee.occupeePar!=None and laCaseRecherchee.occupeePar.couleur==self.couleur:
-                                # ie est occupee par un camarade
-                                sortirDeLaBoucleDIterationDeTrajectoire=True
+                                # Update the display state if required
+                                if avecAffichage:
+                                    laCaseRecherchee.etatAffichage = {"normal": False, "echec": False, "rond": False, "targetPiece": True, "apresDeplacement": False, "passageSourisSurRond": False, "selectionDePiece": False}
+                            # Check if the square is occupied by a piece of the same color
+                            elif laCaseRecherchee.occupeePar is not None and laCaseRecherchee.occupeePar.couleur == self.couleur:
+                                sortirDeLaBoucleDIterationDeTrajectoire = True
                             else:
-                                # ie est occupee par personne
                                 casePossible.append(laCaseRecherchee)
-                                if avecAffichage == True:
-                                    laCaseRecherchee.etatAffichage = {"normal":False,"echec":False,"rond":True,"targetPiece":False,"apresDeplacement":False,"passageSourisSurRond":False,"selectionDePiece":False}
-                            break # pas utile de continuer a itérer puisqu'on a trouver la case
-                    if sortirDeLaBoucleDIterationDeTrajectoire==True:
-                        sortirDeLaBoucleDIterationDeTrajectoire=False
+                                # Update the display state if required
+                                if avecAffichage:
+                                    laCaseRecherchee.etatAffichage = {"normal": False, "echec": False, "rond": True, "targetPiece": False, "apresDeplacement": False, "passageSourisSurRond": False, "selectionDePiece": False}
+                            break
+
+                    # Exit the trajectory iteration if a valid move is found
+                    if sortirDeLaBoucleDIterationDeTrajectoire:
+                        sortirDeLaBoucleDIterationDeTrajectoire = False
                         break
-        return(casePossible)
 
+        # Return the list of possible destination squares
+        return casePossible
 
-    def estDansPlateau(self,newCasePossible):
-        if 1<=newCasePossible[0]<=8 and 1<=newCasePossible[1]<=8:
-            return(True)
-        else:
-            return(False)
-
-
-
-#p=Fou("b","bn","b")
-#print(p)
+    # Method to check if a square is within the chessboard boundaries
+    def estDansPlateau(self, newCasePossible):
+        return 1 <= newCasePossible[0] <= 8 and 1 <= newCasePossible[1] <= 8

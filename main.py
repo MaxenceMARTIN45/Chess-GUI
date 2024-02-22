@@ -1,26 +1,18 @@
-﻿# Importation des classes
-
-# from Classes.Case import *
-# from Classes.Cavalier import *
-# from Classes.FenetrePrincipale import *
-# from Classes.Fou import *
-# from Classes.GestionnaireEvenement import *
-# from Classes.Piece import *
-# from Classes.Pion import *
-# from Classes.Plateau import *
-# from Classes.Reine import *
-# from Classes.Roi import *
-# from Classes.Tour import *
-
+﻿# Importe la classe FenetrePrincipale depuis le module Classes.FenetrePrincipale
 import Classes.FenetrePrincipale as fn
 
+# Fonction principale du programme
 def main():
-    # fenetrePrincipale=Classes.FenetrePrincipale.FenetrePrincipale()
+    # Crée une instance de la classe FenetrePrincipale
     fenetrePrincipale = fn.FenetrePrincipale()
-    # fenetrePrincipale=c.FenetrePrincipale()
+    
+    # Affiche la fenêtre principale
     fenetrePrincipale.afficher()
 
+# Vérifie si le script est exécuté en tant que programme principal
 if __name__ == "__main__":
+    # Appelle la fonction main() si le script est exécuté directement
     main()
 else:
+    # Affiche un message d'erreur si le script est importé en tant que module
     print("Une erreur s'est produite")

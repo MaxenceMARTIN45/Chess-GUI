@@ -1,58 +1,50 @@
-﻿# Importation des classes
-
-from Classes.Piece import *
-
-# Importation pour Pygame
-
-# import pygame
-# from pygame.locals import *
-# import sys
-
-# Classe Roi
+﻿from Classes.Piece import *
 
 class Roi(Piece):
 
-    def __init__(self,case,couleur,poste):
-        # Attributs
-        super().__init__(case,couleur,poste)
-        self.numeroDucoup = 0 # utile pour le rock
-        self.deplacementPossible = [(1,0),(-1,0),(0,1),(0,-1),(1,1),(-1,-1),(-1,1),(1,-1)]
+    def __init__(self, case, couleur, poste):
+        super().__init__(case, couleur, poste)
+        self.numeroDucoup = 0
+        self.deplacementPossible = [(1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (-1, 1), (1, -1)]
 
-    def caseOuLeDeplacementEstPossible(self,plateau,avecAffichage):#,gestionnaireEvenement):
+    def caseOuLeDeplacementEstPossible(self, plateau, avecAffichage):
+        # Obtient les coordonnées actuelles du roi sur le quadrillage
         caseActuelle = self.case.coordonnees_quadrillage
+        # Liste pour stocker les cases où le déplacement est possible
         casePossible = []
+
+        # Parcours de tous les déplacements possibles
         for deplacement in self.deplacementPossible:
-            newCasePossible = (caseActuelle[0]+deplacement[0],caseActuelle[1]+deplacement[1])
+            # Calcul des nouvelles coordonnées possibles après le déplacement
+            newCasePossible = (caseActuelle[0] + deplacement[0], caseActuelle[1] + deplacement[1])
+
+            # Vérifie si la nouvelle case est dans le plateau
             if self.estDansPlateau(newCasePossible):
-                # Trouver la case associée
+                # Parcours de toutes les cases du plateau
                 for case in plateau.casesEchiquier:
+                    # Vérifie si la case actuelle correspond à la nouvelle case possible
                     if newCasePossible == case.coordonnees_quadrillage:
                         laCaseRecherchee = case
-                        # Regarder si une piece est sur cette case
-                        if laCaseRecherchee.occupeePar!=None and laCaseRecherchee.occupeePar.couleur!=self.couleur:
-                            # ie est occupee par un adversaire
+                        # Vérifie si la case est occupée par une pièce de couleur opposée
+                        if laCaseRecherchee.occupeePar is not None and laCaseRecherchee.occupeePar.couleur != self.couleur:
                             casePossible.append(laCaseRecherchee)
-                            if avecAffichage == True:
-                                laCaseRecherchee.etatAffichage = {"normal":False,"echec":False,"rond":False,"targetPiece":True,"apresDeplacement":False,"passageSourisSurRond":False,"selectionDePiece":False}
-                        elif laCaseRecherchee.occupeePar!=None and laCaseRecherchee.occupeePar.couleur==self.couleur:
-                            # ie est occupee par un camarade
-                            pass
+                            if avecAffichage:
+                                laCaseRecherchee.etatAffichage = {"normal": False, "echec": False, "rond": False,
+                                                                    "targetPiece": True, "apresDeplacement": False,
+                                                                    "passageSourisSurRond": False, "selectionDePiece": False}
+                        # Vérifie si la case est occupée par une pièce de la même couleur
+                        elif laCaseRecherchee.occupeePar is not None and laCaseRecherchee.occupeePar.couleur == self.couleur:
+                            pass  # Ne fait rien dans ce cas
                         else:
-                            # ie est occupee par personne
                             casePossible.append(laCaseRecherchee)
-                            if avecAffichage == True:
-                                laCaseRecherchee.etatAffichage = {"normal":False,"echec":False,"rond":True,"targetPiece":False,"apresDeplacement":False,"passageSourisSurRond":False,"selectionDePiece":False}
-                        break # pas utile de continuer a itérer puisqu'on a trouver la case
-        return(casePossible)
+                            if avecAffichage:
+                                laCaseRecherchee.etatAffichage = {"normal": False, "echec": False, "rond": True,
+                                                                    "targetPiece": False, "apresDeplacement": False,
+                                                                    "passageSourisSurRond": False, "selectionDePiece": False}
+                        break  # Sort du boucle dès qu'une case est trouvée
 
-    def estDansPlateau(self,newCasePossible):
-        if 1<=newCasePossible[0]<=8 and 1<=newCasePossible[1]<=8:
-            return(True)
-        else:
-            return(False)
+        return casePossible
 
-
-
-#p=Roi("b","bn","b")
-#print(p)
-
+    def estDansPlateau(self, newCasePossible):
+        # Vérifie si les coordonnées sont dans les limites du plateau (entre 1 et 8 inclus)
+        return 1 <= newCasePossible[0] <= 8 and 1 <= newCasePossible[1] <= 8

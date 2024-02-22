@@ -1,1 +1,3 @@
-# Chess-GUI
+# Chess GUI
+
+Add the king's castling

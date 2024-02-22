@@ -43,6 +43,7 @@ class Roi(Piece):
                                                                     "passageSourisSurRond": False, "selectionDePiece": False}
                         break  # Sort du boucle dès qu'une case est trouvée
 
+        # PUISQU'ON PARLE DU ROI IL FAUT VERIFIER QUE ON VA PAS SE METTRE ECHEC EN SE DEPLACANT
         return casePossible
 
     def estDansPlateau(self, newCasePossible):

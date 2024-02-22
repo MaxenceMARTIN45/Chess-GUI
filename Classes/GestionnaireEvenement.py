@@ -2,6 +2,7 @@
 import pygame
 from pygame.locals import *
 import copy
+import tkinter as tk
 
 class GestionnaireEvenement:
 
@@ -12,6 +13,7 @@ class GestionnaireEvenement:
         self.tourDuJoueur = "blanc"  # Couleur du joueur dont c'est le tour
         self.casesAvancees = None  # Cases associées à un déplacement en cours
         self.casesPossibles = None  # Cases où la pièce sélectionnée peut se déplacer
+        self.deja_afficher_echec_et_mat = 0  # Indicateur pour savoir si le message d'échec et mat a déjà été affiché
 
     def gererEvenements(self, FenetrePrincipale):
         # Gestion des événements principaux du jeu
@@ -24,6 +26,35 @@ class GestionnaireEvenement:
             for piece in FenetrePrincipale.plateau.piecesEchiquier:
                 if piece.poste == "pion":
                     piece.promotion(FenetrePrincipale.plateau)
+            if self.est_echec_et_mat(FenetrePrincipale.plateau):
+                self.deja_afficher_echec_et_mat += 1
+                if self.deja_afficher_echec_et_mat == 3:
+                    self.afficher_message_echec_et_mat()
+
+    def afficher_message_echec_et_mat(self):
+        # Création de la fenêtre
+        fenetre = tk.Tk()
+        titre = "Échec et mat"
+        fenetre.title(titre)
+
+        # Ajout du texte et du bouton dans la fenêtre
+        texte = "Échec et mat. Victoire des {} !".format("blancs" if self.tourDuJoueur == "noir" else "noirs")
+        tk.Label(fenetre, text=texte).pack()
+        tk.Button(fenetre, text="OK", command=fenetre.destroy).pack()
+
+        # Centrer la fenêtre au milieu de l'écran
+        largeur_fenetre = 300  # Remplacez par la largeur souhaitée
+        hauteur_fenetre = 50  # Remplacez par la hauteur souhaitée
+
+        # Calcul des coordonnées pour centrer la fenêtre
+        x = (fenetre.winfo_screenwidth() - largeur_fenetre) // 2
+        y = (fenetre.winfo_screenheight() - hauteur_fenetre) // 2
+
+        # Définir la géométrie de la fenêtre pour la centrer
+        fenetre.geometry('{}x{}+{}+{}'.format(largeur_fenetre, hauteur_fenetre, x, y))
+
+        # Lancement de la boucle principale
+        fenetre.mainloop()
 
     def quitterSiInstruction(self, event, FenetrePrincipale):
         # Vérifie si l'événement est de type QUIT (fermeture de fenêtre)
@@ -343,3 +374,51 @@ class GestionnaireEvenement:
             if case.nom == caseACopier.nom:
                 copieCase = case
         return copiePiece, copieCase, copiePlateau
+
+    def est_echec_et_mat(self, plateau):
+        # On copie le plateau afin de pouvoir simuler des déplacements
+        copiePlateau = copy.deepcopy(plateau)
+
+        # Recherche du roi sur le plateau
+        case_du_roi = self.caseDuRoiDuJoueur(copiePlateau)
+        roi = case_du_roi.occupeePar
+        est_echec, piece_qui_cause_echec = self.joueurEstEchecEtPieceQuiCauseEchecAuRoi(copiePlateau)
+        
+        # Si le roi n'est pas en échec, la partie n'est pas en échec et mat
+        if not est_echec:
+            return False
+        
+        # Obtient les mouvements possibles du roi avant de vérifier l'échec
+        mouvement_du_roi_avant_verification_echec = roi.caseOuLeDeplacementEstPossible(copiePlateau, avecAffichage=False)
+        # Vérifie les cases possibles avec l'échec au roi pris en compte
+        casesPossiblesApresVerificationEchec = self.verifieCasesPossiblesAvecEchecAuRoiPrisEnCompte(piece=roi, casesPossibles=mouvement_du_roi_avant_verification_echec, plateau=copiePlateau)[0]
+        
+        # Vérifie s'il y a des mouvements possibles pour le roi
+        mouvements_possibles_du_roi = casesPossiblesApresVerificationEchec != []
+        
+        # Si le roi peut se déplacer, la partie n'est pas en échec et mat
+        if mouvements_possibles_du_roi:
+            return False
+
+        # Vérifie si une pièce du joueur peut capturer la menace
+        capture_menace_possible = False
+        pieces = copiePlateau.piecesBlancEchiquier if self.tourDuJoueur == "blanc" else copiePlateau.piecesNoirEchiquier
+
+        # Exclut le roi des pièces à considérer
+        for piece in pieces:
+            if piece.poste == "roi":
+                pieces.remove(piece)
+                break
+        
+        # Vérifie si une pièce peut capturer la menace
+        for piece in pieces:
+            casePossible = piece.caseOuLeDeplacementEstPossible(copiePlateau, avecAffichage=False)
+            if piece_qui_cause_echec.case in casePossible:
+                capture_menace_possible = True
+                break
+        
+        # Si le roi est en échec et aucune pièce ne peut capturer la menace, alors c'est un échec et mat
+        if est_echec and not mouvements_possibles_du_roi and not capture_menace_possible:
+            return True
+        else:
+            return False
